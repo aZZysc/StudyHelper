@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StudyHelper</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>📘 StudyHelper</h1>
+  <div>Hello, <span id="userName"></span>! <button onclick="logout()">Logout</button></div>
+</header>
+<main>
+  <section id="dashboard">
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search tasks..." />
+      <button onclick="addTask()">+ Task</button>
+    </div>
+    <div id="taskList"></div>
+    <div id="pomodoro">
+      <h3>⏳ Pomodoro Timer</h3>
+      <div id="timer">25:00</div>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2025 StudyHelper</p>
+</footer>
+<script src="../src/script.js"></script>
+</body>
+</html>

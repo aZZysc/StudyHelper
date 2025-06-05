@@ -1,0 +1,100 @@
+/* Общая структура страницы */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #f0f4f8;
+}
+
+/* Контейнер для всей страницы */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контент между header и footer */
+main {
+    flex: 1;
+    padding: 1em;
+}
+
+/* Шапка и подвал */
+header, footer {
+    background: #2c3e50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Контейнер для логина */
+.login-container {
+    margin: 100px auto;
+    width: 300px;
+    padding: 2em;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Панель управления */
+.controls {
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+}
+
+/* Pomodoro */
+#pomodoro {
+    margin-top: 2em;
+    padding: 1em;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+}
+
+/* Карточки задач */
+.task-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-left: 5px solid #007BFF;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.task-card p {
+    margin: 0 0 12px 0;
+    color: #555;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions a,
+.task-actions button {
+    padding: 6px 12px;
+    text-decoration: none;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-actions button:hover,
+.task-actions a:hover {
+    background-color: #0056b3;
+}
