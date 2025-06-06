@@ -1,19 +1,19 @@
-// Загрузка задач из localStorage
+// localStorage
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-// Отображаем имя пользователя
+// username
 document.getElementById('userName').textContent = localStorage.getItem('user');
 
-// Поиск по задачам
+// search
 document.getElementById('searchInput').addEventListener('input', renderTasks);
 
-// Выход
+// logout 
 function logout() {
   localStorage.removeItem('user');
   window.location.href = 'login.html';
 }
 
-// Добавление новой задачи
+// add new task
 function addTask() {
   const id = Date.now();
   tasks.push({ id, title: 'New Task', desc: '' });
@@ -21,7 +21,7 @@ function addTask() {
   window.location.href = `task.html?id=${id}`; // Переход к редактированию
 }
 
-// Отображение задач
+// show tasks
 function renderTasks() {
   const container = document.getElementById('taskList');
   const filter = document.getElementById('searchInput').value.toLowerCase();
