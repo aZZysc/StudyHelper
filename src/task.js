@@ -14,13 +14,13 @@ function saveTask() {
   const taskId = urlParams.get("id");
 
   if (taskId !== null) {
-    tasks[taskId] = task; // Обновление
+    tasks[taskId] = task; // Update
   } else {
-    tasks.push(task);     // Добавление новой
+    tasks.push(task);     // add new
   }
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
 
-  // ✅ Автоматический переход на главную
+  // redirect to main page
   window.location.href = "index.html";
 }
